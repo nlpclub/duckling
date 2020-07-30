@@ -927,7 +927,7 @@ rulePeriodicHolidays = mkRuleHolidays
   , ( "元旦", "元旦(节|節)?|((公|(阳|陽))(历|曆))?新年", monthDay 1 1 )
   , ( "新年夜", "新年夜", monthDay 12 31 )
   , ( "情人节", "(情人|(圣瓦伦丁|聖瓦倫丁))(节|節)", monthDay 2 14 )
-  , ( "清明节", "清明(节|節)", monthDay 4 5 )
+  , ( "清明节", "清明(节|節)|踏青节|行清节|三月节|祭祖节", monthDay 4 5 )
   , ( "光棍节", "光棍(节|節)", monthDay 11 11 )
   , ( "圣帕特里克节", "圣帕特里克节|聖帕特裏克節", monthDay 3 17 )
   , ( "教师节", "(中(国|國))?教师(节|節)", monthDay 9 10 )
@@ -967,6 +967,12 @@ ruleComputedHolidays = mkRuleHolidays
     , cycleNthAfter False TG.Day 8 dhanteras )
   , ( "春节", "春(节|節)|(农历|農曆|唐人)新年|新(正|春)|正月(正(时|時)|朔日)|岁首"
     , chineseNewYear )
+  , ( "中秋节", "中秋节|秋夕|八月节|八月半|月夕|月节|十五夜|中秋"
+    , zhongqiu )
+  , ( "惊蛰", "惊蛰|启蛰|驚蟄"
+    , jingzhe )
+  , ( "端午节", "端午节|端午|端阳节|龙舟节|重午节|龙节|正阳节|天中节"
+    , duanwu )
   , ( "基督圣体节", "基督(圣体|聖體)((圣|聖)血)?((节|節)|瞻(礼|禮))"
     , cycleNthAfter False TG.Day 60 easterSunday )
   , ( "排灯节", "(排|万|萬|印度)(灯节|燈節)"
