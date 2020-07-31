@@ -554,6 +554,12 @@ allExamples = concat
              , "正月朔日"
              , "正月正時"
              ]
+   , examples (datetimeHoliday (2020, 3, 5, 0, 0, 0) Day "惊蛰")
+             [ "惊蛰"
+             , "启蛰"
+             , "驚蟄"
+             , "啟蟄"
+             ]
   , examples (datetimeHoliday (2013, 5, 30, 0, 0, 0) Day "基督圣体节")
              [ "基督聖體节"
              , "基督聖體聖血瞻礼"
