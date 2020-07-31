@@ -5,7 +5,8 @@
 -- LICENSE file in the root directory of this source tree.
 
 module Duckling.Time.Computed
-  ( chanukah, chineseNewYear,jingzhe, duanwu, zhongqiu, dhanteras, easterSunday, eidalAdha, eidalFitr
+  ( chanukah, chineseNewYear, jingzhe, duanwu, zhongqiu
+  , dhanteras, easterSunday, eidalAdha, eidalFitr
   , globalYouthServiceDay, guruGobindSinghJayanti, karvaChauth
   , krishnaJanmashtami, lagBaOmer, mawlid, muharram, navaratri, orthodoxEaster
   , passover, rajab, rakshaBandhan, mahavirJayanti, mahaShivaRatri

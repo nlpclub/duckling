@@ -969,7 +969,7 @@ ruleComputedHolidays = mkRuleHolidays
     , chineseNewYear )
   , ( "中秋节", "中秋节|秋夕|八月节|八月半|月夕|月节|十五夜|中秋"
     , zhongqiu )
-  , ( "惊蛰", "惊蛰|启蛰|驚蟄"
+  , ( "惊蛰", "惊蛰|启蛰|驚蟄|啟蟄"
     , jingzhe )
   , ( "端午节", "端午节|端午|端阳节|龙舟节|重午节|龙节|正阳节|天中节"
     , duanwu )
