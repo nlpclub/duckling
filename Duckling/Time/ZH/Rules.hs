@@ -655,7 +655,7 @@ ruleMorning :: Rule
 ruleMorning = Rule
   { name = "morning"
   , pattern =
-    [ regex "早上|早晨|\x671d(\x982d)?早"
+    [ regex "早上|早晨|上午|\x671d(\x982d)?早"
     ]
   , prod = \_ ->
       let from = hour False 4
@@ -763,10 +763,32 @@ ruleTonight :: Rule
 ruleTonight = Rule
   { name = "tonight"
   , pattern =
-    [ regex "今晚|今天晚上"
+    [ regex "今晚|今天晚上|晚上|晚间"
     ]
   , prod = \_ -> do
       td2 <- interval TTime.Open (hour False 18) (hour False 0)
+      Token Time . partOfDay <$> intersect today td2
+  }
+
+ruleThisMorining :: Rule
+ruleThisMorining = Rule
+  { name = "thismorning"
+  , pattern =
+    [ regex "早上|早晨|上午|今早|今晨"
+    ]
+  , prod = \_ -> do
+      td2 <- interval TTime.Open (hour False 4) (hour False 12)
+      Token Time . partOfDay <$> intersect today td2
+  }
+
+ruleThisAfternoon :: Rule
+ruleThisAfternoon = Rule
+  { name = "thisafternoon"
+  , pattern =
+    [ regex "下午|晌午"
+    ]
+  , prod = \_ -> do
+      td2 <- interval TTime.Open (hour False 12) (hour False 19)
       Token Time . partOfDay <$> intersect today td2
   }
 
@@ -1171,6 +1193,8 @@ rules =
   , ruleThisDayofweek
   , ruleThisTime
   , ruleThisYear
+  , ruleThisMorining
+  , ruleThisAfternoon
   , ruleNextDayofweek
   , ruleTimeofdayAmpm
   , ruleTimeofdayOclock
