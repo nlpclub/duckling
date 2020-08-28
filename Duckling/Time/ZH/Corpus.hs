@@ -154,8 +154,10 @@ allExamples = concat
              ]
   , examples (datetime (2013, 2, 5, 0, 0, 0) Day)
              [ "上周二"
+             , "上周周二"
              , "上礼拜二"
              , "上週二"
+             , "上週週二"
              , "上禮拜二"
              , "上星期二"
              ]
@@ -237,8 +239,10 @@ allExamples = concat
              ]
   , examples (datetime (2013, 2, 12, 0, 0, 0) Day)
              [ "这周二"
+             , "这周周二"
              , "这礼拜二"
              , "這週二"
+             , "這週週二"
              , "這禮拜二"
              , "今個星期二"
              , "今個礼拜二"
@@ -553,12 +557,6 @@ allExamples = concat
              , "正月正时"
              , "正月朔日"
              , "正月正時"
-             ]
-   , examples (datetimeHoliday (2020, 3, 5, 0, 0, 0) Day "惊蛰")
-             [ "惊蛰"
-             , "启蛰"
-             , "驚蟄"
-             , "啟蟄"
              ]
   , examples (datetimeHoliday (2013, 5, 30, 0, 0, 0) Day "基督圣体节")
              [ "基督聖體节"
